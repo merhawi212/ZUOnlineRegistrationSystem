@@ -12,3 +12,5 @@ The main objectives of the proposed web-based system are listed below.
 ✓ Automates the registration process without an advisor
 ✓ Creates university classes for the admin.
 ✓ Makes the E-Registration easy to use.
+
+![Alt Text](asset/S)
