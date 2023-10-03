@@ -1,0 +1,120 @@
+ 
+       
+    <div class="form-group" style="display:flex; margin-top: -3%; margin-right: 0; flex-direction: row; float: right; width: 40%; ">
+        <button  type='submit' class='btn btn-primary' id ="addcourse" data-toggle="modal" data-target="#exampleModal" 
+              style=" z-index: 999; padding: 2.2%;  margin-left:  24%;  border-radius:5px"> Find Course To Add </button>
+        <button  type='submit' class='btn btn-primary' id ="dropCourse" data-toggle="modal" data-target="#exampleModal_2" 
+     style=" padding: 2.2%; z-index: 999;  border-radius:5px; margin-left:  16%; "> Find Course To Drop  </button>
+
+    </div>
+
+   
+
+
+        <!--model-->
+        <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true" style=" z-index: 9999999;">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 100%">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Course(s)</h5>
+                 <div id='AddRequestErrorNotification' ></div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="padding-top: 0.2%">
+              <div class="page-styling" style="padding:0.6%" >
+                  <div class="form-group col-md-4" style="text-align:center; margin-bottom: 1%">
+                        <label for="courseID">Select Courses From Projection</label> 
+                        <select name="search-course-projection" id="AddBycourseID" class="form-control input-lg" >
+
+                         </select>
+                        </div>
+                  <div  style="  margin-top: 1%; width: 100% ">
+
+                     <i class="fa fa-info-circle" aria-hidden="true"></i><span style="padding-left:1%; ">
+                        To reduce any potential conflicts, please save the course(s) you want to drop to the cart first.
+                        </span> 
+                 </div>
+                       
+              </div> 
+                <div class="page-styling"  >
+                     <div class="numofrecordsShown">Number of records shown: <span id="numofRecordsShownAddToRequest">0</span></div>
+
+                <div class=" form-group col-md-12">
+                            <table id="getSections" style="z-index:99999;">
+                                    <thead class="head-style"> <td>Course Title</td><td>CourseNo</td> 
+                                    <td>Credit Hrs.</td> <td>CRN</td><td>Section No</td>
+                                    <td>Instructor</td><td>MeetingTime</td><td>Status</td><td width="5%"> - &nbsp; </td>
+                            </thead>
+                                    <tbody id="sections" >
+                                        <tr ><td colspan="11" style="text-align: center">No records available</td></tr>
+                                    </tbody>
+
+                            </table>
+                   
+                 </div>      
+                       <div class="showNumberofEntries" style="margin:1%">showing <span id="oneEntryofAddToRequest">0</span> to <span id="numberofDisplayingofAddToRequest"> 0 </span>
+                           <span style="padding-left:0.4%"> of </span> <span id="TotalnumberofEntriesofAddToRequest" style="padding-left:0.4%"> 0 </span>
+                           <span style="padding-left:0.4%">entries</span>
+                       </div>
+                     <br>
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" onclick="SaveAddDropCourses(this);" class="btn btn-primary saveAddDropCourseRequest"  
+                        value="Add" style="background-color: green;">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--registered courses-->
+          
+        <div  class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" 
+              aria-hidden="true" style=" z-index: 9999999;">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 100%">
+            <div class="modal-content" style="width: 100%; margin: 0;">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Drop Enrolled Course(s)</h5>
+                <div id='DropRequestErrorNotification' ></div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                
+              </div>
+              <div class="modal-body">
+                  
+                  <div class="page-styling" >
+                     <div class="numofrecordsShown">Number of records shown: <span id="numofRecordsShownDropToRequest">0</span></div>
+
+                        <div class="container-addDrop" style="margin-top: 0%">
+
+                                    <div class=" form-group col-md-12">
+                                        <table id="tEnrolled_Classes" style="z-index:99999">
+                                                <thead class="head-style"> <td>Course Title</td><td>Course No</td> <td>Credit Hrs</td> <td>CRN</td><td>Section No</td>
+                                                 <td>Instructor</td><td>MeetingTime</td><td>EnrolledDateTime</td> <td> Status </td><td style="width:6%">Action</td>
+                                        </thead>
+                                                <tbody id="AddDrop_Courses" >
+
+                                                </tbody>
+
+                                        </table>
+                                   </div>
+                    </div>
+                     <div class="showNumberofEntries" style="margin:1%">showing <span id="oneEntryofDropToRequest">0</span> to <span id="numberofDisplayingofDropToRequest"> 0 </span>
+                           <span style="padding-left:0.4%"> of </span> <span id="TotalnumberofEntriesofDropToRequest" style="padding-left:0.4%"> 0 </span>
+                           <span style="padding-left:0.4%">entries</span>
+                       </div>
+                     <br>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button"  onclick="SaveAddDropCourses(this);" value ='Drop' class="btn btn-primary saveAddDropCourseRequest"  
+                        style="background-color: green;">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>

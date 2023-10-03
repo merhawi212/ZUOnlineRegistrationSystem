@@ -1,0 +1,71 @@
+/*  start login page*/
+ #top-info{
+         width: 32%;
+         margin-top: 2%;
+        margin-left: 30%;
+        margin-right: 80%;
+        /*padding-bottom: 0.5%;*/   
+        }
+        #logo image{
+            width: 50%;
+            border-radius: 4%;
+        }
+.loginForm{
+            width: 32%;
+            margin-top: 8% ;
+            margin-left: 30%;
+            margin-right: 80%;
+            padding-bottom: 0.5%;
+            background-color: lightslategrey;
+            box-shadow: 0px 0px 2px 2px  rgba(0, 0, 0, .4);
+        }
+   .loginForm form{
+            margin: 1.5em;
+            background-color: white;
+            box-shadow: 0px 0px 2px 2px  rgba(0, 0, 0, .4);
+            padding: 2%; 
+        }
+        form .form-group{
+            width: 87%;
+            
+        }
+         
+        #submit{
+            width: 20%;
+            padding: 1%;
+            margin-left: 2%;
+           background: #086277;
+           color: white;
+         
+        }
+       
+        .error{
+            color: red;
+        }
+    
+         .loginForm h3{
+            /*width: 36%;*/
+           padding: 2%;
+           text-align: center;
+           color: white;
+           background:  darkcyan;
+/*           border-radius: 4%;*/
+        }
+        .input-group{
+          border-collapse: separate; 
+          width: 114%;
+        }
+       .input-group-addon{
+           text-align: center;
+           border: 1px solid lightgrey;
+           border-right: none;
+           /*border-left: none;*/
+           padding: 3%;
+           padding-top: 1%;
+           padding-bottom: 0.0%;
+        }
+        input form-control{
+            padding: 2%;
+        }
+        /*  end login page*/
+        

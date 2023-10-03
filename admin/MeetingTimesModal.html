@@ -1,0 +1,99 @@
+ 
+<div  class="modal fade" id="exampleModal_MeetingTimesAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_MeetingTimesAdd" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 60%; z-index: 99999">
+            <div class="modal-content" style="width :80%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel_MeetingTimesAdd" style="font-weight: bold">Add MeetingTimes</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <div id='AddMeetingTimesErrorNotification' style="color: red;
+                     align-content: center;  margin-bottom:1%; margin-left: 20%" ></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="room_id">MeetingTimes ID:</label>
+                     <input type="text" name="room_id" class="form-control" id="meetingTimes_id" value="" required>
+                  </div>
+                 <div class="form-group">
+                     <label for="room_location">Days</label>
+                    <input type="number" name="room_location" class="form-control" id="days" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="room_capacity">StartTime</label>
+                     <input type="time" id="startTime" name="startTime" class="form-control" value="" min="09:00" max="18:00" required>
+
+                  </div>
+                  <div class="form-group">
+                     <label for="room_campus">EndTime</label>
+                     <input type="time" id="endTime" name="endTime" class="form-control" value="" min="09:00" max="18:00" required>
+
+                  </div>
+                   <div  style="  padding-top: 0.5%; padding-bottom: 0.5%;  margin-bottom: 0; margin-left: 1%;margin-top: 0.5%">
+
+                        <i class="fa fa-info-circle" aria-hidden="true"></i><span style="padding-left:1%; color: green ">
+                            MeetingDays are created in bits, 1, 2, 4, 8, 16 for Mon, Tue, Wed, Thur, Fri respectively. <br><!-- comment -->
+                          <span style="margin-left:3%;"> if its Mon and Wed => 1+4 = 5.</span>
+                        </span>
+                  
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="add_meetingTimes" onclick="add_meetingTimes();" class="btn btn-primary"  style="background-color: green;">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+<div  class="modal fade" id="exampleModal_MeetingTimesEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_MeetingTimesEdit" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 60%; z-index: 99999">
+            <div class="modal-content" style="width :80%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel_MeetingTimesEdit">Edit Room</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                   <div class="form-group">
+                  <div id='EditMeetingTimesErrorNotification' style="color: red;
+                     align-content: center;  margin-bottom:1%; margin-left: 20%" ></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="meetingTimes_ID">MeetingTimes ID:</label>
+                     <input type="text" name="meetingTimes_ID" class="form-control" id="meetingTimes_ID" value="" disabled>
+                  </div>
+                 <div class="form-group">
+                     <label for="Days">Days</label>
+                    <input type="number" name="Days" class="form-control" id="Days" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="StartTime">StartTime</label>
+                     <input type="text" id="StartTime" name="StartTime" class="form-control" value=""  required>
+                   
+                 
+                  </div>
+                  <div class="form-group">
+                     <label for="EndTime">EndTime</label>     
+                      <input type="text" id="EndTime" name="EndTime" class="form-control"  required>
+                  </div>
+                  <div  style="  padding-top: 0.5%; padding-bottom: 0.5%;  margin-bottom: 0; margin-left: 1%;margin-top: 0.5%">
+
+                        <i class="fa fa-info-circle" aria-hidden="true"></i><span style="padding-left:1%; color: green">
+                            MeetingDays are created in bits, 1, 2, 4, 8, 16 for Mon, Tue, Wed, Thur, Fri respectively. <br><!-- comment -->
+                            <span style="margin-left:3%;"> if its Mon and Wed => 1+4 = 5.</span>
+                        </span>
+                  
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="update_meetingTimes" onclick="update_meetingTimes();" class="btn btn-primary"  style="background-color: green;">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>

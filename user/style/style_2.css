@@ -1,0 +1,35 @@
+/*body{
+    
+    background-color: #e8dae2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Mulish", sans-serif;
+}*/
+
+.hero-image{ 
+    background-image: linear-gradient( rgba(0, 50, 100, .90), rgba(0, 50, 100, .90) ), url(../image/toplogo.jpg);
+    height: 500px;
+    width: auto;
+    position: relative;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin: 30px 30px;
+    border-radius: 7px;
+}
+
+/*body, html {
+  height: 100%;
+  width: 100%;
+}*/
+
+.bcontainer{
+    height: 69vh;
+}
+
+p{
+    /*padding: 50px;*/
+    /*font-family: sans-serif;*/
+    /*font-size: 60px;*/
+}

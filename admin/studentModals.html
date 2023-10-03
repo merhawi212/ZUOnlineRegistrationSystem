@@ -1,0 +1,141 @@
+
+<div  class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_2" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 100%; z-index: 99999">
+            <div class="modal-content" style="width :100%">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel_2" style="font-weight: bold">Student Details -<span id='studentName' ></span></h5>
+                  <div style='float: right; margin-left: 20%;'>
+                   <div class="successNotification" ></div>
+                     <div class="errorNotification"></div>
+                   </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style='margin-left: -10%'>
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" >
+                  
+                
+                  <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active" id="nav-first-tab" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-first" aria-selected="true">Student Projection </a>
+                          <a class="nav-item nav-link" id="nav-second-tab" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-second" aria-selected="false">Registered Courses</a>
+                          <a class="nav-item nav-link" id="nav-third-tab" data-toggle="tab" href="#nav-third" role="tab" aria-controls="nav-third" aria-selected="false">Add/Drop Request</a>
+                           <a class="nav-item nav-link" id="nav-fourth-tab" data-toggle="tab" href="#nav-fourth" role="tab" aria-controls="nav-fourth" aria-selected="false">Classes</a>
+
+                        </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-first-tab">
+                       <div class="page-styling" style="margin-top:0" >
+                     <div class="numofrecordsShown" style="padding-top:1.2%; padding-bottom: 1.2%;">Number of records shown: <span id="numofRecordsShownForDisplay_coursesFromProjection">0</span></div>
+
+                        <table id="courseprojectionTable" style="width:100%">
+                                <thead class="head-style"> 
+                                <tr><th>Course Title</th><th>Course No</th><th>Subject</th>
+                                    <th>Major</th> <th>Credit Hrs</th><th style="width:8%">status</th><th> - </th> </tr>
+                             </thead>
+                                <tbody id="coursesFromProjection-adminside" >
+                                    <tr><td colspan="11" style="text-align: center">No records available</td></tr>
+                                </tbody>
+                       </table> 
+                      <div class="showNumberofEntries" style="margin-left:1%; margin-top: 1%">showing <span id="oneEntryForDisplay_coursesFromProjection">0</span> 
+                            to <span id="numberofDisplayingForDisplay_coursesFromProjection"> 0 </span>
+                         <span style="padding-left:0.4%"> of </span> <span id="TotalnumberofEntriesForDisplay_coursesFromProjection" style="padding-left:0.4%"> 0 </span>
+                                          <span style="padding-left:0.4%">entries</span>
+                         </div> 
+                       <br>
+                       </div>
+                    </div>
+                    
+      
+                    <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-second-tab">
+                      <div class="page-styling" style="margin-top:0" >
+                         <div class="numofrecordsShown" style="padding-top:1.2%; padding-bottom: 1.2%;">Number of records shown: <span id="numofRecordsShownForDisplay_enrolled_Courses">0</span></div>
+
+   
+                        <table id="tEnrolled_Classes" style="width:100%">
+                                <thead class="head-style"> <th style='width:8%'>Course Title</th><th>Course No</th>
+                                 <th>Major</th><th>Credit Hrs</th> <th>CRN</th><th>Section No</th>
+                                <th>Instructor</th><th>MeetingTime</th><th>Location</th><th>SeatsLeft</th> 
+                                <th>EnrolledDateTime</th> <th>Status</th> <th style='width:5%'>-</th></thead>
+
+                                <tbody id="enrolled_Courses" >
+                                    <tr><td colspan="13" style="text-align: center">No records available</td></tr>
+                                </tbody>
+
+                             </table> 
+                         <div class="showNumberofEntries" style="margin-left:1%; margin-top: 1%">showing <span id="oneEntryForDisplay_enrolled_Courses">0</span> 
+                            to <span id="numberofDisplayingForDisplay_enrolled_Courses"> 0 </span>
+                         <span style="padding-left:0.4%"> of </span> <span id="TotalnumberofEntriesForDisplay_enrolled_Courses" style="padding-left:0.4%"> 0 </span>
+                                          <span style="padding-left:0.4%">entries</span>
+                            </div> 
+                          <br>
+                          </div>
+                       </div>
+                    
+                    <div class="tab-pane fade" id="nav-third" role="tabpanel" aria-labelledby="nav-third-tab">
+                        <div class="page-styling" style="margin-top:0" >
+                           <div class="numofrecordsShown" style="padding-top:1.2%; padding-bottom: 1.2%;">Number of records shown: <span id="numofRecordsShownForDisplay_AddDrop_Courses">0</span></div>
+
+
+                        <table id="AddDropRequestTable" style="width:100%">
+                                <thead class="head-style"> <th style="width:10%">Course Title</th><th>Course#</th>
+                                 <th>Major</th><th>CHrs.</th> <th>CRN</th><th>Section#</th>
+                                <th>Instructor</th><th>MeetingTime</th> <th>Location</th><th>SeatsLeft</th><th>Req.Type</th><th>Req.Date</th><th>Status</th></thead>
+
+                                <tbody id="AddDrop_Courses" >
+                                    <tr><td colspan="13" style="text-align: center">No records available</td></tr>
+                                </tbody>
+
+                             </table> 
+                           <div class="showNumberofEntries" style="margin-left:1%; margin-top: 1%">showing <span id="oneEntryForDisplay_AddDrop_Courses">0</span> 
+                            to <span id="numberofDisplayingForDisplay_AddDrop_Courses"> 0 </span>
+                         <span style="padding-left:0.4%"> of </span> <span id="TotalnumberofEntriesForDisplay_AddDrop_Courses" style="padding-left:0.4%"> 0 </span>
+                                          <span style="padding-left:0.4%">entries</span>
+                            </div> 
+                          <br>
+                        
+                    </div>
+                </div>
+                    
+                    <div class="tab-pane fade show " id="nav-fourth" role="tabpanel" aria-labelledby="nav-fourth-tab">
+                        <div  style="  padding-top: 0.5%; padding-bottom: 0.5%; width: 100%; margin-bottom: 0; margin-left: 1%;margin-top: 0.5%">
+
+                        <i class="fa fa-info-circle" aria-hidden="true"></i><span style="padding-left:1%; ">
+                         If the enroll button is disabled, it means that either the class is full or student cannot enroll to that class due to time conflict. 
+                        </span>
+                  
+                            </div>
+                       <!--</div>-->
+                       <div class="page-styling" style="margin-top:0" >
+                       
+                     <div class="numofrecordsShown" style="padding-top:1%; padding-bottom: 1%;">Number of records shown: <span id="numofRecordsShownForDisplay_Courseclasses">0</span>
+                     </div>
+
+                        <table id="EnrollToClassTable" style="width:100%">
+                              <thead class="head-style"> <th style="width:10%">Course Title</th><th>Course#</th>
+                                 <th>Major</th><th>CHrs.</th> <th>CRN</th><th>Section#</th>
+                                <th>Instructor</th><th>MeetingTime</th> <th>Location</th><th>SeatsLeft</th><th style="width:6%">-</th></thead>
+
+                                <tbody id="CourseClasses" >
+                                    <tr><td colspan="11" style="text-align: center">No data found</td></tr>
+                                </tbody>
+                       </table> 
+                      <div class="showNumberofEntries" style="margin-left:1%; margin-top: 1%">showing <span id="oneEntryForDisplay_Courseclasses">0</span> 
+                            to <span id="numberofDisplayingForDisplay_Courseclasses"> 0 </span>
+                         <span style="padding-left:0.4%"> of </span> <span id="TotalnumberofEntriesForDisplay_Courseclasses" style="padding-left:0.4%"> 0 </span>
+                                          <span style="padding-left:0.4%">entries</span>
+                         </div> 
+                       <br>
+                       </div>
+                    </div>
+                  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="save_addDropAction" onclick="save_AddDropAction();" class="btn btn-primary"  style="background-color: green;">Save</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+</div>

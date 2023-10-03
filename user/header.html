@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ZU E-Registration</title>
+      <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+       
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"  rel="stylesheet" type="text/css"/>
+        
+        <link href="../style/head.css?2" rel="stylesheet" type="text/css"/>
+        <link href="../style/style.css?5" rel="stylesheet" type="text/css"/>
+        <link href="../style/notification.css" rel="stylesheet" type="text/css"/>
+<!--        <link href="../style/footer.css?2" rel="stylesheet" type="text/css"/>
+        <link href="../style/style_2.css?2" rel="stylesheet" type="text/css"/>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+         <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+          <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+         <script src="../script/templating_engine.js?3" type="text/javascript"></script>
+          <script src="../script/script.js?4" type="text/javascript"></script>
+          
+       
+        
+          
+<style>
+    body{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+       background:  lightgrey;
+    }
+
+    .preloader{
+        background: url("../image/preloader.gif") white;
+        background-size: cover;
+        background-size: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        /*z-index: 99999999;*/
+        text-align: center;
+    }
+     .dropdown {
+  position: relative;
+  display: inline-block;
+}
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 8%;
+}
+   .dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ 
+}
+.dropdown-content a:hover {background-color: #ddd;text-decoration: none; color: black  }
+
+.dropdown:hover .dropdown-content{display: block; background-color:#17001d!important; }
+a.nav-item.nav-link{font-size: 20px}
+
+</style>
+
+</head>
+<body>
+    <div class="preloader"> 
+       <!--<p style="text-align: center; margin-top: 30%">Please wait! Loading...</p>-->
+  </div>
+    <div id="topHeader">
+                 <a href="HomePage.php"> <img src="../image/ownlogo_3.png" id="logo" alt="logo"/></a>
+
+    </div>
+    <div class="top-menuContainer">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <!--<a href="HomePage.php" class="navbar-brand"><img src="../image/zulogo.png" id="logo" alt="logo"/></a>-->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+            <div class="navbar-nav " role="tablist">
+                <a href="HomePage.php" class="nav-item nav-link HomePage" id="HomePage" role="tab" aria-selected="true">Home</a>
+        
+            </div>
+            <div class="navbar-nav" role="tablist">
+                <a href="BrowseClass.php" class="nav-item nav-link BrowseClass" id="BrowseClass" role="tab" aria-selected="false">BrowseClass</a>
+        
+            </div><!--
+-->            <div class="navbar-nav" role="tablist">
+                <a href="RegisterClass.php" class="nav-item nav-link pin RegisterClass Scheduler" id="RegisterClass" role="tab" aria-selected="false">RegisterClass</a>
+        
+            </div>
+            <div class="navbar-nav dropdown" role="tablist">
+                <a href="#" class="nav-item nav-link pin_adddrop AddDropRequest MyAddDropPage" aria-label="breadcrumb" id="pin_adddrop"  role="tab" aria-selected="false">Add/Drop </a>
+                <div class="dropdown-content" role="tablist">
+                    <a href="AddDropRequest.php">AddDropRequest</a>
+                    <a href="MyAddDropPage.php" >MyAddDropPage</a> 
+                  </div>
+            </div>
+            <div class="navbar-nav" role="tablist">
+                <a href="EnrolledCourses.php" class="nav-item nav-link EnrolledCourses"  role="tab" aria-selected="false">ViewEnrolledCourses</a>
+        
+            </div>
+            <div class="navbar-nav "  id="logout" style="border-left:1px solid red; z-index: 100"  >
+                <a href="logout.php" class="nav-item nav-link logout-link" title="Logout" style="width:100% ">
+                    <i class="fas fa-sign-out-alt" style="color: white; padding: 4%"></i>Logout</a>
+            </div>
+        </div>
+    </nav>
+</div>
+    
+<script>
+
+    $(document).ready(function() {
+     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+   var id = "."+pgurl.substr(0, pgurl.indexOf("."));
+
+      $(id).attr('class','nav-item nav-link active');
+});
+    </script>

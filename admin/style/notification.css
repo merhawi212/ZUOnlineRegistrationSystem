@@ -1,0 +1,43 @@
+#updatesuccessNotification, #deletesuccessNotification,
+    #updateerrorNotification, #deleteerrorNotification, 
+    #adderrorNotification, #addsuccessNotification,
+    #updatecoursesuccessNotification,#updatecourseerrorNotification, #deletecourseerrorNotification,
+    #deletecoursesuccessNotification,#addcourseerrorNotification, #addcoursesuccessNotification, 
+    #EnrollsuccessNotification, #EnrollerrorNotification{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: 60%;
+  background-color:  green ;
+  color: white;
+  text-align: center;
+  border-radius: 1px;
+  padding: 1%;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 20%;
+ 
+  font-size: 17px;
+}
+#deleteerrorNotification, #updateerrorNotification, #adderrorNotification, #EnrollerrorNotification{
+    background-color:  #F94C4C ;
+}
+#updatesuccessNotification.show, #deletesuccessNotification.show,
+#updateerrorNotification.show, #deleteerrorNotification.show, 
+#adderrorNotification.show, #addsuccessNotification.show, 
+#EnrollsuccessNotification.show, #EnrollerrorNotification.show{
+  visibility: visible;
+  -webkit-animation: fadein 2.5s, fadeout 0.8s 2.5s;
+  animation: fadein 2.5s, fadeout 0.8s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {right: 0; opacity: 0;} 
+  to {left: 30px; opacity: 1;}
+}
+
+
+@-webkit-keyframes fadeout {
+  from {left: 30px; opacity: 1;} 
+  to {right: 0; opacity: 0;}
+}

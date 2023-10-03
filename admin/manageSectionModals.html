@@ -1,0 +1,127 @@
+  <div  class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_2" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 60%; z-index: 99999">
+            <div class="modal-content" style="width :70%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel_2" style="font-weight: bold">Add Section</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <div id='AddsectionErrorNotification' style="color: red;
+                     align-content: center;  margin-bottom:1%; margin-left: 20%" ></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="courseid">Course ID:</label>
+                     <input type="text" name="id" class="form-control" id="courseid" value="" required>
+                  </div>
+                 <div class="form-group">
+                     <label for="crn">CRN:</label>
+                    <input type="number" name="crn" class="form-control" id="CRN" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="section_no">Section No:</label>
+                    <input type="number" name="section_no" class="form-control" id="section_no" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="inst_id">Instructor ID:</label>
+                    <input type="text" name="instruc" class="form-control" id="fac_id" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="meetingday">MeetingDay:</label>
+                    <input type="number" name="meetingday" class="form-control" id="meetingday" value="" required>
+                  </div>
+                   <div class="form-group">
+                     <label for="meetingtime">MeetingTime:</label>
+                    <input type="text" name="meetingtime" class="form-control" id="meetingtime" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="meetinglocation">Location:</label>
+                    <input type="text" name="meetinglocation" class="form-control" id="meetinglocation" value="" required>
+                  </div>
+ 
+                 <div class="form-group">
+                     <p style="font-weight: bold; margin: 1%">Note: <span style="font-size: 14px; font-weight: bold; color: green">
+                             MeetingDays are created in bits - 1, 2, 4, 8, 16 for Mon, Tues, Wed, Thurs, Fri respectively. <br>
+                             <span style="margin-left: 2%"> if the meetingdays are Mon & Wed, you should put as => 5. </span></span></p>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="add_section" onclick="add_Section();" class="btn btn-primary"  style="background-color: green;">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+<div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 60%; z-index: 99999">
+            <div class="modal-content" style="width :70%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Section</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+               <div class="form-group">
+                    <label for="CourseName">CourseName:</label>
+                    <input type="text" name="CourseName" class="form-control" id="name" value="" disabled>
+    
+                  </div>
+                  <div class="form-group">
+                     <label for="id">CourseID:</label>
+                    <input type="text" name="id" class="form-control" id="id" value="">
+                  </div>
+                  <div class="form-group">
+                     <label for="major">Major:</label>
+                     <input type="text" name="major" class="form-control" id="Major" value="" disabled>
+                  </div>
+                 <div class="form-group">
+                     <label for="crn">CRN:</label>
+                    <input type="number" name="crn" class="form-control" id="crn" value="" disabled>
+                  </div>
+                  <div class="form-group">
+                     <label for="SecNo">Section No:</label>
+                    <input type="number" name="SecNo" class="form-control" id="SecNo" value="">
+                  </div>
+                  <div class="form-group">
+                     <label for="instructor">Instructor:</label>
+                    <input type="text" name="instructor" class="form-control" id="Instructor" value="">
+                  </div>
+                  <div class="form-group">
+                     <label for="day">MeetingDay:</label>
+                    <input type="number" name="day" class="form-control" id="day" value="">
+                  </div>
+                   <div class="form-group">
+                     <label for="time">MeetingTime:</label>
+                    <input type="text" name="time" class="form-control" id="time" value="">
+                  </div>
+                  <div class="form-group">
+                     <label for="location">Location:</label>
+                    <input type="text" name="location" class="form-control" id="location" value="">
+                  </div>
+                  
+                  
+ 
+                 <div class="form-group">
+                     <p style="font-weight: bold; margin: 1%">Note: <span style="font-size: 14px">
+                             MeetingDays are created in bites. 1, 2, 4, 8, 16 for Mon, Tues, Wed, Thurs, Fri respectively</span></p>
+                  </div>
+                        
+                        
+                        
+                     
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="updateSection" onclick="update_Section();" class="btn btn-primary"  style="background-color: green;">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>

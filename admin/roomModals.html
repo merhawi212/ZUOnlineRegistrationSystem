@@ -1,0 +1,75 @@
+  <div  class="modal fade" id="exampleModal_roomAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_roomAdd" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 60%; z-index: 99999">
+            <div class="modal-content" style="width :80%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel_roomAdd" style="font-weight: bold">Add Room</h5>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                  <div id='AddroomErrorNotification' style="color: red;
+                     align-content: center;  margin-bottom:1%; margin-left: 20%" ></div>
+                  </div>
+                  <div class="form-group">
+                     <label for="room_id">Room ID:</label>
+                     <input type="text" name="room_id" class="form-control" id="room_id" value="" required>
+                  </div>
+                 <div class="form-group">
+                     <label for="room_location">Room Location</label>
+                    <input type="text" name="room_location" class="form-control" id="room_location" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="room_capacity">Room Capacity</label>
+                    <input type="text" name="room_capacity" class="form-control" id="room_capacity" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="room_campus">Campus</label>
+                    <input type="text" name="room_campus" class="form-control" id="room_campus" value="" required>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="add_room" onclick="add_room();" class="btn btn-primary"  style="background-color: green;">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+<div  class="modal fade" id="exampleModal_roomEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_roomEdit" aria-hidden="true">
+          <div class="modal-dialog  modal-xl" role="document" style="width: 60%; z-index: 99999">
+            <div class="modal-content" style="width :80%">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel_roomEdit">Edit Room</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                    <div class="form-group">
+                     <label for="Room_ID">Room ID:</label>
+                     <input type="text" name="Room_ID" class="form-control" id="Room_ID" value="" disabled>
+                  </div>
+                 <div class="form-group">
+                     <label for="Room_Location">Room Location</label>
+                    <input type="text" name="Room_Location" class="form-control" id="Room_Location" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="Room_Capacity">Room Capacity</label>
+                    <input type="text" name="Room_Capacity" class="form-control" id="Room_Capacity" value="" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="Room_Campus">Campus</label>
+                    <input type="text" name="Room_Campus" class="form-control" id="Room_Campus" value="" required>
+                  </div>
+                  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="update_room" onclick="update_room();" class="btn btn-primary"  style="background-color: green;">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>

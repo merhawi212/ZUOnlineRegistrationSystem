@@ -1,0 +1,111 @@
+          @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root{
+    --line-border-fill:#9c27b0;
+    --line-border-empty: #bdbdbd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*body{
+    background-color: #ffff;
+    font-family: "Mulish", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}*/
+
+h1{
+    color: #212121;
+    margin-bottom: 90px;
+}
+
+.fa-html5{
+    font-size: 1.8rem;
+    color: #575757;
+}
+
+/*.container{
+    text-align: center;
+}*/
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 50px;
+    max-width: 100%;
+    width: 650px;
+}
+
+.progress-container::before{
+    content: "";
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 100%;
+    z-index: -1;
+    transform: 0.4s ease;
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 0%;
+    z-index: -1;
+    transform: 0.4s ease;
+}
+
+.circle{
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #b2bec3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: 0.4s ease;
+}
+
+.circle.active{
+    border-color: var(--line-border-fill);
+}
+
+.btn{
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.97);
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}

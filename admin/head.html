@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+      <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+       
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <link href="../style/head.css?3" rel="stylesheet" type="text/css"/>
+        <link href="../style/style.css?5" rel="stylesheet" type="text/css"/>
+        <link href="../style/notification.css" rel="stylesheet" type="text/css"/>
+        
+        <!--confirmation popup-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!--<script src="../script/templating_engine.js" type="text/javascript"></script>-->
+        <script src="../script/script.js?2" ></script>
+
+     
+ <style>
+    body{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background:  lightgrey;
+       
+    }
+     .dropdown {
+  position: relative;
+  display: inline-block;
+}
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   margin-left: 25%;
+   width: 80%;
+}
+   .dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;text-decoration: none; color: black  }
+
+.dropdown:hover .dropdown-content{display: block; background-color:#17001d!important; }
+
+.top-menuContainer .collapse .navbar-nav .nav-link{width: 90%;  margin-left: 25%;}
+a.nav-item.nav-link{font-size: 20px}
+</style>
+</head>
+<body>
+    <div id="topHeader">
+        <!--<a href="HomePage.php"> <img src="../image/n.png" id="logo" alt="logo"/></a>-->
+       <a href="HomePage.php"> <img src="../image/ownlogo_3.png" id="logo" alt="logo"/></a>
+
+    </div>
+
+    <div class="top-menuContainer">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="HomePage.php" class="nav-item nav-link HomePage " >Home</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="Classes.php" class="nav-item nav-link Classes">Classes</a>
+        
+            </div>
+            <div class="navbar-nav">
+                <a href="manageStudentsCourse.php" class="nav-item nav-link manageStudentsCourse">ManageStudentCourses </a>
+        
+            </div>  
+             <div class="navbar-nav dropdown">
+                <a href="#" class="nav-item nav-link DataInput ClassScheduleCreater" aria-label="breadcrumb">ClassScheduler</a>
+                <div class="dropdown-content">
+                    <a href="DataInput.php">DataInput</a>
+                    <a href="ClassScheduleCreater.php" >ClassScheduleCreator</a> 
+                  </div>
+            </div>
+            <div class="navbar-nav "  id="login" style="border-left:1px solid red; z-index: 999; margin-left: 3%; width: 10%"  >
+                <a href="logout.php" class="nav-item nav-link logout" style="width:80% ">
+                  <i class="fas fa-sign-out-alt" style="color: white; padding: 0% 1% 1% 1%;"></i>Log Out</a>
+            </div>
+        </div>
+    </nav>
+</div>
+ <script>
+
+    $(document).ready(function() {
+     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+   var id = "."+pgurl.substr(0, pgurl.indexOf("."));
+
+      $(id).attr('class','nav-item nav-link active');
+});
+    </script>
+    
+
+

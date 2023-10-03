@@ -1,0 +1,106 @@
+
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+#topHeader{
+        height: 50px;
+/*        -webkit-filter : hue-rotate(120deg);
+        filter : saturate(0.6);
+        filter: invert(1);*/
+        /*background-color: rgba(0,50,100,.97);*/
+        padding-bottom: 60px;
+        background: #5D5B57;
+        background: #365C7C;
+    }
+    #topHeader a img{
+        /*opacity: 0.4;*/
+
+    }
+
+    .top-menuContainer{
+      width: 100%;
+      z-index: 1;
+      margin-bottom: 1rem;
+    }
+    .top-menuContainer .navbar{
+        margin-left: -0.5%;
+        padding: 0.2rem 0.7rem;
+    }
+    .top-menuContainer .navbar #logo {
+        width:160%;
+        height: 50px;
+        border-radius: 5%;
+        
+       
+     
+    }
+ 
+    .top-menuContainer .navbar .collapse .navbar-nav  {
+         width: 20%;
+         margin: 0 1% 0 1%;
+        
+          
+    }
+        .top-menuContainer .collapse .navbar-nav  .nav-link {
+            width: 100%;
+            margin: 1%!important;
+            margin-left: 1%!important;
+             text-align: center;
+             color: white;
+
+        }
+        .top-menuContainer .collapse .navbar-nav a.nav-link.active{
+            color: lightcoral;
+            margin: 1%;
+            margin-left: 1%;
+            
+        }
+    /*.navbar-nav  .nav-link:hover{color: white!important}*/
+     .top-menuContainer .navbar   #logout {
+         width: 22%;
+        margin-left: 20%;
+        padding-left: 5%;
+    }
+
+
+   .carousel{
+      position: relative;
+        margin-right:2%;
+        margin-left: 2% ;
+         
+    }
+    .carousel-inner .carousel-item .d-block {
+          height: 350px;
+        
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        background-color: #dd4b39;
+            width: 20%;
+            height: 15%;
+        
+    }
+    .top-menuContainer .bg-light {  
+        /*background: #17001d!important;*/
+        border: 20px;
+        align-items: center;
+        background: #2F2E2C!important;
+        background: rgba(0,50,100,.97)!important;
+       
+    }
+    
+/*    img{
+        border-radius: 5px;
+        height: 50px;
+        margin: 5px;
+        opacity: 0.75;
+    }*/
+    #topHeader #logo{
+       border-radius: 5px;
+    height: 60px;
+    margin: 5px;
+    /* opacity: 0.75; */
+    margin-left: 1px;
+    margin: 0;
+    padding-bottom: 0;
+    border-radius: 0%;
+    /* margin-top: -0.1%; */
+    width: 100px;
+    }
